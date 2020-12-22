@@ -24,7 +24,10 @@ async function getQuote() {
     "http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json";
 
   try {
-    const response = await fetch(apiUrl);
+    const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+    const apiUrl = 'https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json';
+
+    const response = await fetch(proxyUrl + apiUrl);
     const data = await response.json();
     // if no author was found, give default respone.
     if (data.quoteAuthor == "") {
@@ -40,7 +43,6 @@ async function getQuote() {
     }
     quoteText.innerText = data.quoteText;
     removeLoadingSpinner();
-    throw new Error("oops");
   } catch (error) {
     getQuote();
   }
