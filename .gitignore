@@ -1,6 +1,7 @@
 cors-anywhere
 node_modules
 build# Logs
+build
 logs
 *.log
 npm-debug.log*

@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "live-server --open=public",
-    "deploy": "netlify deploy ./public"
+    "build": "gulp",
+    "test": "live-server --open=build",
+    "deploy": "netlify deploy --dir=build --prod"
   },
   "repository": {
     "type": "git",
@@ -18,16 +20,22 @@
   },
   "homepage": "https://github.com/AMSteffensen/VanillaJSProjects#readme",
   "dependencies": {
-    "gitignore": "^0.6.0"
+    "gitignore": "^0.6.0",
+    "postcss": "^8.2.1"
   },
   "devDependencies": {
+    "autoprefixer": "^10.1.0",
+    "cssnano": "^4.1.10",
     "gulp": "^4.0.2",
+    "gulp-browserify": "^0.5.1",
+    "gulp-concat": "^2.6.1",
     "gulp-jshint": "^2.1.0",
     "gulp-load-plugins": "^2.0.6",
-    "gulp-uglify": "^3.0.2",
-    "live-server": "^1.2.1",
-    "gulp-concat": "^2.6.1",
+    "gulp-postcss": "^9.0.0",
+    "gulp-real-favicon": "^0.3.2",
     "gulp-sourcemaps": "^3.0.0",
-    "gulp-terser": "^2.0.0"
+    "gulp-terser": "^2.0.0",
+    "gulp-uglify": "^3.0.2",
+    "live-server": "^1.2.1"
   }
 }
