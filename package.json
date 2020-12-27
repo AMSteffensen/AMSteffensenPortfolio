@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "live-server --open=public"
+    "start": "live-server --open=public",
+    "deploy": "netlify deploy ./public"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,11 @@
   },
   "homepage": "https://github.com/AMSteffensen/VanillaJSProjects#readme",
   "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-jshint": "^2.1.0",
+    "gulp-load-plugins": "^2.0.6",
+    "gulp-uglify": "^3.0.2",
     "live-server": "^1.2.1"
   }
 }
