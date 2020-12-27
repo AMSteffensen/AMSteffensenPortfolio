@@ -21,6 +21,7 @@
   "homepage": "https://github.com/AMSteffensen/VanillaJSProjects#readme",
   "dependencies": {
     "gitignore": "^0.6.0",
+    "normalize": "^0.3.1",
     "postcss": "^8.2.1"
   },
   "devDependencies": {
