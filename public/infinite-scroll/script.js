@@ -1,5 +1,6 @@
 const imageContainer = document.getElementById('image-container');
 const loader = document.getElementById('loader');
+const loaderImg = document.getElementById('svg');
 
 let ready = false;
 let imagesLoaded = 0;
@@ -13,12 +14,15 @@ const apiUrl = `https://api.unsplash.com/photos/random?client_id=${apiKey}&count
 
 // check if all images where loaded
 function imageLoaded() {  
+    loaderImg.classList.add('fadeIn');
     imagesLoaded++;
     if (imagesLoaded === totalImages) {
         imagesLoaded = 0;
         ready = true;
-        loader.hidden = true;
-    }
+        //loader.hidden = true;
+        loaderImg.classList.remove('fadeIn');
+        loaderImg.classList.add('fadeOut'); 
+    }  
 }
 
 // Helper Function to Set Attributes on DOM Elements
@@ -38,6 +42,7 @@ function displayPhotos() {
         setAttributes(item, {
             href: photo.links.html,
             target: '_blank',
+            loading: 'lazy'
         });
         const img = document.createElement('img');
         setAttributes(img, {

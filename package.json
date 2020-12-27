@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "live-server --open=public"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/AMSteffensen/VanillaJSProjects/issues"
   },
-  "homepage": "https://github.com/AMSteffensen/VanillaJSProjects#readme"
+  "homepage": "https://github.com/AMSteffensen/VanillaJSProjects#readme",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
 }

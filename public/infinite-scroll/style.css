@@ -45,6 +45,47 @@ h1 {
     margin-top: 5px;
 }
 
+/* Animations */
+
+.fadeOut
+{
+    animation: fadeOut 5s ease 0s 1 normal forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+.fadeIn
+{
+    animation: fadeIn 5s ease 0s 1 normal forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 /* Media Query: Large Smartphone */
 @media screen and (max-width: 600px) {
     h1 {
@@ -55,3 +96,4 @@ h1 {
         margin: 10px;
     }
 }
+
