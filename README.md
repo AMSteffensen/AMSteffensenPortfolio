@@ -1,4 +1,4 @@
-# VanillaJSProjects
+# Portfolio
 Cors Server: https://hidden-temple-21187.herokuapp.com/
 
 Live Production Deployment:
