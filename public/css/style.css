@@ -41,7 +41,7 @@
   }
   
   .main-container h2 {
-    margin-top: 1em;
+    margin-top: 2.5em;
   }
   
   .main-container hr {
@@ -296,7 +296,7 @@
   
   .projects img {
     display: block;
-    height: auto;
+    height: 300px;
     width: 100%;
   }
   
